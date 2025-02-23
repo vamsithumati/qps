@@ -1,0 +1,100 @@
+
+
+<div class="about_section layout_padding">
+    <div class="container-fluid">
+       <div class="about_section_main">
+          <div class="row">
+             <div class="col-md-6 padding_left_0">
+                <div class="image_3"><img src="assets/images/about-img.png"></div>
+             </div>
+             <div class="col-md-6">
+                <div class="about_taital_main">
+                   <h1 class="about_taital">This just <br>Walking on beach</h1>
+                   <p class="about_text">content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like </p>
+                   <div class="readmore_bt"><a href="#">Read More</a></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- beach section end -->
+ <!-- yoga section start -->
+ <div class="yoga_section layout_padding">
+    <div class="container-fluid">
+       <div class="womans_section_2">
+          <div class="row">
+             <div class="col-md-6">
+                <div class="yoga_taital_main">
+                   <h1 class="about_taital">Yoga <br>Life and fitness</h1>
+                   <p class="about_text">content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like </p>
+                   <div class="readmore_bt"><a href="#">Read More</a></div>
+                </div>
+             </div>
+             <div class="col-md-6 paddlin_right_0">
+                <div class="yoga_img"><img src="assets/images/yoga-img.png"></div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- yoga clothes section end -->
+ <!-- chiled section start -->
+ <div class="about_section layout_padding">
+    <div class="container-fluid">
+       <div class="about_section_main">
+          <div class="row">
+             <div class="col-md-6 padding_left_0">
+                <div class="image_3"><img src="assets/images/mother-img.png"></div>
+             </div>
+             <div class="col-md-6">
+                <div class="about_taital_main">
+                   <h1 class="about_taital">meet <br>up your chiled</h1>
+                   <p class="about_text">content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like </p>
+                   <div class="readmore_bt"><a href="#">Read More</a></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- chiled section end -->
+ <!-- cycle section start -->
+ <div class="yoga_section layout_padding">
+    <div class="container-fluid">
+       <div class="womans_section_2">
+          <div class="row">
+             <div class="col-md-6">
+                <div class="yoga_taital_main">
+                   <h1 class="about_taital">Thinking <br>on cycle</h1>
+                   <p class="about_text">content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like </p>
+                   <div class="readmore_bt"><a href="#">Read More</a></div>
+                </div>
+             </div>
+             <div class="col-md-6 paddlin_right_0">
+                <div class="yoga_img"><img src="assets/images/cycle-img.png"></div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- cycle section end -->
+ <!-- runing section start -->
+ <div class="about_section layout_padding">
+    <div class="container-fluid">
+       <div class="about_section_main">
+          <div class="row">
+             <div class="col-md-6 padding_left_0">
+                <div class="image_3"><img src="assets/images/road-img.png"></div>
+             </div>
+             <div class="col-md-6">
+                <div class="about_taital_main">
+                   <h1 class="about_taital">This just <br>Runing on road</h1>
+                   <p class="about_text">content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like </p>
+                   <div class="readmore_bt"><a href="#">Read More</a></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
