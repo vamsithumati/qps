@@ -64,9 +64,7 @@
                 <a href="#"><i class="fab fa-facebook"></i></a>
               </li>
               <li>
-                <a href="#" target="_blank"
-                  ><i class="fab fa-twitter"></i
-                ></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
               </li>
               <li>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -96,9 +94,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="properties.html">Properties</a></li>
                 <li>
-                  <a href="commercial.html"
-                    >Commercial-Municipal</a
-                  >
+                  <a href="commercial.html">Commercial-Municipal</a>
                 </li>
                 <li><a href="home owner.html" class="active">Home Owner</a></li>
                 <li>
@@ -391,8 +387,14 @@
               <div class="total-amount-box">
                 <span>Total: $<span id="total-amount">0</span></span>
               </div>
-              <div class="cart-icon-box">
+              <div class="cart-icon-box position-relative">
                 <i class="fa fa-shopping-cart" id="cart-icon"></i>
+                <span
+                  class="badge badge-pill badge-danger position-absolute"
+                  id="cart-count"
+                  style="top: -20px; right: -20px"
+                  >0</span
+                >
               </div>
             </div>
           </div>
@@ -530,6 +532,7 @@
       const closeSelectedServices = document.getElementById(
         "close-selected-services"
       );
+      const cartCount = document.getElementById("cart-count");
 
       let selectedFilters = [];
       let totalAmount = 0;
@@ -577,15 +580,15 @@
           const card = document.createElement("div");
           card.className = "col-lg-2 col-md-6 mb-4";
           card.innerHTML = `
-        <div class="card h-100 shadow-sm border-0" style="background-color: #f8f9fa;">
-            <img src="${service.image}" class="card-img-top" alt="${service.description}"/>
-            <div class="card-body d-flex flex-column">
-            <h5>${service.description}</h5>
-            <p class="card-text text-muted">${service.price}</p>
-            <button class="add-button mt-auto add-service-btn">Add</button>
-            </div>
+      <div class="card h-100 shadow-sm border-0" style="background-color: #f8f9fa;">
+        <img src="${service.image}" class="card-img-top" alt="${service.description}"/>
+        <div class="card-body d-flex flex-column">
+        <h5>${service.description}</h5>
+        <p class="card-text text-muted">${service.price}</p>
+        <button class="add-button mt-auto add-service-btn">Add</button>
         </div>
-        `;
+      </div>
+      `;
           servicesContainer.appendChild(card);
 
           card
@@ -597,23 +600,24 @@
               if (!existingService) {
                 const row = document.createElement("tr");
                 row.innerHTML = `
-            <td>${service.description}</td>
-            <td>${service.description}</td>
-            <td>${service.price}</td>
-            <td><button class="remove-service-btn">Remove</button></td>
-          `;
+        <td>${service.description}</td>
+        <td>${service.description}</td>
+        <td>${service.price}</td>
+        <td><button class="remove-service-btn">Remove</button></td>
+        `;
                 row
                   .querySelector(".remove-service-btn")
                   .addEventListener("click", () => {
                     row.remove();
                     updateTotalAmount(-parseFloat(service.price.slice(1)));
+                    updateCartCount(-1);
                     if (selectedServicesTable.rows.length === 0) {
                       selectedServicesSection.style.display = "none";
                     }
                   });
                 selectedServicesTable.appendChild(row);
-                selectedServicesSection.style.display = "block";
                 updateTotalAmount(parseFloat(service.price.slice(1)));
+                updateCartCount(1);
               }
             });
         });
@@ -622,6 +626,10 @@
       function updateTotalAmount(amount) {
         totalAmount += amount;
         totalAmountElement.innerText = totalAmount.toFixed(2);
+      }
+
+      function updateCartCount(count) {
+        cartCount.innerText = parseInt(cartCount.innerText) + count;
       }
 
       cartIcon.addEventListener("click", () => {
@@ -751,9 +759,15 @@
         font-size: 20px;
         color: #f35525;
       }
-    </style>
-    
 
+      .badge {
+        width: 30px;
+        background-color: #f77852;
+        color: white;
+        padding: 10px 5px;
+        border-radius: 50%;
+      }
+    </style>
 
     <footer class="footer-no-gap">
       <div class="container">
