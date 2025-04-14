@@ -42,41 +42,6 @@
         </div>
       </div>
     </div>
-    <!-- ***** Preloader End ***** -->
-
-    <div class="sub-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-8">
-            <ul class="info">
-              <li><i class="fa fa-envelope"></i> info@qualitylandscapes.ca</li>
-              <li><i class="fa fa-phone"></i>+1 647-560-7797</li>
-
-              <li>
-                <i class="fa fa-map"></i> 9940 Ninth Line, Markham,Ontario
-                L6B1A8
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-4 col-md-4">
-            <ul class="social-links">
-              <li>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
@@ -92,18 +57,18 @@
               <!-- ***** Menu Start ***** -->
               <ul class="nav">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="properties.html">Properties</a></li>
+                <!-- <li><a href="properties.html">Properties</a></li> -->
                 <li>
-                  <a href="commercial.html">Commercial-Municipal</a>
+                  <a href="commercial.html">Municipal-Commercial</a>
                 </li>
-                <li><a href="home owner.html" class="active">Home Owner</a></li>
+                <li><a href="home owner.html" class="active">Residential</a></li>
                 <li>
                   <a href="maintenance.html">Maintenance</a>
                 </li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li>
+                <!-- <li>
                   <a href="#"><i class="fa fa-calendar"></i> Request a Quote</a>
-                </li>
+                </li> -->
               </ul>
               <a class="menu-trigger">
                 <span>Menu</span>
@@ -120,7 +85,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <h3>Home Owner</h3>
+            <h3>Residential</h3>
           </div>
         </div>
       </div>
@@ -443,94 +408,100 @@
 
     <script>
       const filters = [
-        {
-          name: "all",
-          label: "Show All",
-        },
-        {
-          name: "service",
-          label: "Service",
-        },
-        {
-          name: "lawn",
-          label: "Lawn",
-        },
-        {
-          name: "garden",
-          label: "Garden",
-        },
-        {
-          name: "tree",
-          label: "Tree",
-        },
-        {
-          name: "irrigation",
-          label: "Irrigation",
-        },
-        {
-          name: "patio",
-          label: "Patio",
-        },
-        {
-          name: "fence",
-          label: "Fence",
-        },
-        {
-          name: "installation",
-          label: "Installation",
-        },
+      {
+        name: "all",
+        label: "Show All",
+      },
+      {
+        name: "service",
+        label: "Service",
+      },
+      {
+        name: "lawn",
+        label: "Lawn",
+      },
+      {
+        name: "garden",
+        label: "Garden",
+      },
+      {
+        name: "tree",
+        label: "Tree",
+      },
+      {
+        name: "irrigation",
+        label: "Irrigation",
+      },
+      {
+        name: "patio",
+        label: "Patio",
+      },
+      {
+        name: "fence",
+        label: "Fence",
+      },
+      {
+        name: "installation",
+        label: "Installation",
+      },
       ];
       const services = [
-        {
-          image: "./assets/images/lights.jpg",
-          description: "Lawn Mowing",
-          price: "$50",
-          tags: ["service", "lawn"],
-        },
-        {
-          image: "assets/images/lights.jpg",
-          description: "Garden Design",
-          price: "$200",
-          tags: ["service", "garden"],
-        },
-        {
-          image: "assets/images/property-01.jpg",
-          description: "Tree Trimming",
-          price: "$75",
-          tags: ["service", "tree"],
-        },
-        {
-          image: "assets/images/property-02.jpg",
-          description: "Irrigation System Installation",
-          price: "$500",
-          tags: ["service", "irrigation"],
-        },
-        {
-          image: "assets/images/property-03.jpg",
-          description: "Patio Installation",
-          price: "$300",
-          tags: ["service", "patio"],
-        },
-        {
-          image: "assets/images/property-04.jpg",
-          description: "Fence Installation",
-          price: "$150",
-          tags: ["service", "fence", "installation"],
-        },
+      {
+        image: "./assets/images/lights.jpg",
+        description: "Lawn Mowing",
+        minPrice: 50,
+        maxPrice: 100,
+        tags: ["service", "lawn"],
+      },
+      {
+        image: "assets/images/lights.jpg",
+        description: "Garden Design",
+        minPrice: 200,
+        maxPrice: 400,
+        tags: ["service", "garden"],
+      },
+      {
+        image: "assets/images/property-01.jpg",
+        description: "Tree Trimming",
+        minPrice: 75,
+        maxPrice: 150,
+        tags: ["service", "tree"],
+      },
+      {
+        image: "assets/images/property-02.jpg",
+        description: "Irrigation System Installation",
+        minPrice: 500,
+        maxPrice: 1000,
+        tags: ["service", "irrigation"],
+      },
+      {
+        image: "assets/images/property-03.jpg",
+        description: "Patio Installation",
+        minPrice: 300,
+        maxPrice: 600,
+        tags: ["service", "patio"],
+      },
+      {
+        image: "assets/images/property-04.jpg",
+        description: "Fence Installation",
+        minPrice: 150,
+        maxPrice: 300,
+        tags: ["service", "fence", "installation"],
+      },
       ];
 
       const filtersContainer = document.querySelector(".filters");
       const servicesContainer = document.getElementById("services-cards");
       const selectedServicesTable = document
-        .getElementById("selected-services-table")
-        .getElementsByTagName("tbody")[0];
+      .getElementById("selected-services-table")
+      .getElementsByTagName("tbody")[0];
       const selectedServicesSection = document.getElementById(
-        "selected-services-section"
+      "selected-services-section"
       );
       const totalAmountElement = document.getElementById("total-amount");
       const cartIcon = document.getElementById("cart-icon");
       const closeSelectedServices = document.getElementById(
-        "close-selected-services"
+      "close-selected-services"
       );
       const cartCount = document.getElementById("cart-count");
 
@@ -538,107 +509,115 @@
       let totalAmount = 0;
 
       filters.forEach((filter) => {
-        const chip = document.createElement("div");
-        chip.className = "filter-chip";
-        chip.innerText = filter.label;
-        chip.addEventListener("click", () => {
-          if (filter.name === "all") {
-            selectedFilters = [];
-            document.querySelectorAll(".filter-chip").forEach((chip) => {
-              chip.classList.remove("active");
-            });
-            chip.classList.add("active");
-          } else {
-            if (selectedFilters.includes(filter.name)) {
-              selectedFilters = selectedFilters.filter(
-                (f) => f !== filter.name
-              );
-              chip.classList.remove("active");
-            } else {
-              selectedFilters.push(filter.name);
-              chip.classList.add("active");
-            }
-            document
-              .querySelector(".filter-chip[data-name='all']")
-              .classList.remove("active");
-          }
-          filterServices();
+      const chip = document.createElement("div");
+      chip.className = "filter-chip";
+      chip.innerText = filter.label;
+      chip.addEventListener("click", () => {
+        if (filter.name === "all") {
+        selectedFilters = [];
+        document.querySelectorAll(".filter-chip").forEach((chip) => {
+          chip.classList.remove("active");
         });
-        chip.setAttribute("data-name", filter.name);
-        filtersContainer.appendChild(chip);
+        chip.classList.add("active");
+        } else {
+        if (selectedFilters.includes(filter.name)) {
+          selectedFilters = selectedFilters.filter(
+          (f) => f !== filter.name
+          );
+          chip.classList.remove("active");
+        } else {
+          selectedFilters.push(filter.name);
+          chip.classList.add("active");
+        }
+        document
+          .querySelector(".filter-chip[data-name='all']")
+          .classList.remove("active");
+        }
+        filterServices();
+      });
+      chip.setAttribute("data-name", filter.name);
+      filtersContainer.appendChild(chip);
       });
 
       function filterServices() {
-        servicesContainer.innerHTML = "";
-        const filteredServices =
-          selectedFilters.length === 0
-            ? services
-            : services.filter((service) =>
-                selectedFilters.some((filter) => service.tags.includes(filter))
-              );
-        filteredServices.forEach((service) => {
-          const card = document.createElement("div");
-          card.className = "col-lg-2 col-md-6 mb-4";
-          card.innerHTML = `
+      servicesContainer.innerHTML = "";
+      const filteredServices =
+        selectedFilters.length === 0
+        ? services
+        : services.filter((service) =>
+          selectedFilters.some((filter) => service.tags.includes(filter))
+          );
+      filteredServices.forEach((service) => {
+        const card = document.createElement("div");
+        card.className = "col-lg-2 col-md-6 mb-4";
+        card.innerHTML = `
       <div class="card h-100 shadow-sm border-0" style="background-color: #f8f9fa;">
-        <img src="${service.image}" class="card-img-top" alt="${service.description}"/>
-        <div class="card-body d-flex flex-column">
-        <h5>${service.description}</h5>
-        <p class="card-text text-muted">${service.price}</p>
-        <button class="add-button mt-auto add-service-btn">Add</button>
-        </div>
+      <img src="${service.image}" class="card-img-top" alt="${service.description}"/>
+      <div class="card-body d-flex flex-column">
+      <h5>${service.description}</h5>
+      <p class="card-text text-muted">Price: $<span class="service-price">${service.minPrice}</span></p>
+      <input type="range" min="${service.minPrice}" max="${service.maxPrice}" value="${service.minPrice}" class="price-slider">
+      <button class="add-button mt-auto add-service-btn">Add</button>
+      </div>
       </div>
       `;
-          servicesContainer.appendChild(card);
+        servicesContainer.appendChild(card);
 
-          card
-            .querySelector(".add-service-btn")
-            .addEventListener("click", () => {
-              const existingService = Array.from(
-                selectedServicesTable.rows
-              ).find((row) => row.cells[0].innerText === service.description);
-              if (!existingService) {
-                const row = document.createElement("tr");
-                row.innerHTML = `
-        <td>${service.description}</td>
-        <td>${service.description}</td>
-        <td>${service.price}</td>
-        <td><button class="remove-service-btn">Remove</button></td>
-        `;
-                row
-                  .querySelector(".remove-service-btn")
-                  .addEventListener("click", () => {
-                    row.remove();
-                    updateTotalAmount(-parseFloat(service.price.slice(1)));
-                    updateCartCount(-1);
-                    if (selectedServicesTable.rows.length === 0) {
-                      selectedServicesSection.style.display = "none";
-                    }
-                  });
-                selectedServicesTable.appendChild(row);
-                updateTotalAmount(parseFloat(service.price.slice(1)));
-                updateCartCount(1);
-              }
-            });
+        const priceSlider = card.querySelector(".price-slider");
+        const servicePrice = card.querySelector(".service-price");
+
+        priceSlider.addEventListener("input", () => {
+        servicePrice.innerText = priceSlider.value;
         });
+
+        card
+        .querySelector(".add-service-btn")
+        .addEventListener("click", () => {
+          const existingService = Array.from(
+          selectedServicesTable.rows
+          ).find((row) => row.cells[0].innerText === service.description) ;
+          if (!existingService || true) {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+      <td>${service.description}</td>
+      <td>${service.description}</td>
+      <td>$${priceSlider.value}</td>
+      <td><button class="remove-service-btn">Remove</button></td>
+      `;
+          row
+            .querySelector(".remove-service-btn")
+            .addEventListener("click", () => {
+            row.remove();
+            updateTotalAmount(-parseFloat(priceSlider.value));
+            updateCartCount(-1);
+            if (selectedServicesTable.rows.length === 0) {
+              selectedServicesSection.style.display = "none";
+            }
+            });
+          selectedServicesTable.appendChild(row);
+          updateTotalAmount(parseFloat(priceSlider.value));
+          updateCartCount(1);
+          }
+        });
+      });
       }
 
       function updateTotalAmount(amount) {
-        totalAmount += amount;
-        totalAmountElement.innerText = totalAmount.toFixed(2);
+      totalAmount += amount;
+      totalAmountElement.innerText = totalAmount.toFixed(2);
       }
 
       function updateCartCount(count) {
-        cartCount.innerText = parseInt(cartCount.innerText) + count;
+      cartCount.innerText = parseInt(cartCount.innerText) + count;
       }
 
       cartIcon.addEventListener("click", () => {
-        selectedServicesSection.style.display =
-          selectedServicesSection.style.display === "none" ? "block" : "none";
+      selectedServicesSection.style.display =
+        selectedServicesSection.style.display === "none" ? "block" : "none";
       });
 
       closeSelectedServices.addEventListener("click", () => {
-        selectedServicesSection.style.display = "none";
+      selectedServicesSection.style.display = "none";
       });
 
       filterServices();
@@ -767,6 +746,7 @@
         padding: 10px 5px;
         border-radius: 50%;
       }
+      
     </style>
 
     <footer class="footer-no-gap">
